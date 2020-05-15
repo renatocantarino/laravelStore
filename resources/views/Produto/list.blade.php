@@ -11,9 +11,15 @@
             <td>{{ $p->valor }} </td>
             <td>{{ $p->descricao }} </td>
             <td>{{ $p->quantidade }} </td>
-            <td> <a href="/produto/show/<?= $p->id ?>">
+            <td>
+                <a href="/produto/show/<?= $p->id ?>" title ="exibir item">
             <span class="glyphicon glyphicon-search"></span>
-                </a></td>
+                </a>
+
+                 <a href="/produto/buy/<?= $p->id ?>"  title ="comprar">
+                    <span class="glyphicon glyphicon-credit-card"></span>
+                        </a>
+                    </td>
         </tr>
         @endforeach
     </table>
